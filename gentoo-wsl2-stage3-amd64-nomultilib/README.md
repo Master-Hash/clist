@@ -2,6 +2,9 @@
 
 自己先把博客炸掉，又把台机炸掉，只好四海为家了。当作测评文。
 
+和 Debian 相比，Gentoo 自带的 Prompt 和编辑器高亮都要好看得多。  
+直接导入 tar 包，真的是无比的灵活。最后发现`eselect rc list`还可以正确显示 wsl 的自动配置。
+
 [教程](https://developer.moe/gentoo-on-wsl-2)  
 这个教程显然需要一些勘误。
 
@@ -42,6 +45,20 @@ https://blog.csdn.net/qq_29384639/article/details/90518491
 
 ## 修改默认用户
 先创建用户，修改密码，配好 wheel 组，再
-`> <发行版名> config --default-user <用户名>`
+~~`> <发行版名> config --default-user <用户名>`~~
+
+[教程](https://www.jianshu.com/p/468dfa4f365d)  
+实际上，只有从商店安装的 WSL 才会自带一个执行文件，所以 import 的只能自己改注册表。
+我并不知道是 HKEY_USERS 的哪一个子项，所以直接搜索了 LXSS，直达。
+
+话说至于为什么都是 1000。。。自己考证去，我昏的，没看清楚。
+
+
+## 内核
+[从此查看发行](https://docs.microsoft.com/zh-cn/windows/wsl/kernel-release-notes)  
+[从此下载](https://github.com/microsoft/WSL2-Linux-Kernel/releases)
+
+releases 界面给的是 tar.gz 包（zip 的不要）  
+个人的方案是 `tar xzvfp 2020-07-24-12-20-02-WSL2-Linux-Kernel-4.19.121-microsoft-standard.tar.gz`，出来的是一个文件夹。名字显然不是 Gentoo 的规范（规范是什么，我也不知道，明天快查）
 
 总体不是太吃内存。check 时 CPU 30% 左右，编译时 70%~80%，内存最高的时候 1200M。当然全过程没有 gcc llvm 之类的重型包。。。
