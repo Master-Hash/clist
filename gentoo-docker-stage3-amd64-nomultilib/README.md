@@ -10,4 +10,4 @@
 关于阿里云：没有原生的 Gentoo 镜像很遗憾。听说用 memdisk 装镜像可以重装（找不到链接了），不过我还是放弃吧。Gentoo Prefix 还更简单呢。
 服务器的思维和桌面很不同……现在掌握的都很少。
 
-记着 run 的时候把 `/usr/src` 挂到 `/usr/src` 上面。（很不爽）
+~~记着 run 的时候把 `/usr/src` 挂到 `/usr/src` 上面。（很不爽）~~实测 Debian 的`/usr/src/`里面是一堆 headers，不能直接用。我还是学学写 ebuild 吧。
