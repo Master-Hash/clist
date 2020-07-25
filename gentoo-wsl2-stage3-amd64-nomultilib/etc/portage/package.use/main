@@ -1,0 +1,2 @@
+>=dev-libs/libxml2-2.9.9-r3 python
+#app-emulation/libpod -rootless

@@ -1,0 +1,4 @@
+games-misc/nyancat ~amd64
+app-emulation/libpod ~amd64
+>=app-emulation/conmon-2.0.0 ~amd64
+app-misc/neofetch **
